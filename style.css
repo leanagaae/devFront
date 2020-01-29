@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+
 body{
   background: #ccebe8;
 }
+
+body h1{
+  font-family: 'Indie Flower', cursive;
+}
+
+
