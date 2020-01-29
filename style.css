@@ -25,5 +25,8 @@ body figure{
 
 #effets div{
   background: #ffcf36;
-  width: 100px;
+  height: 100px;
+  margin: 2px;
+  border-radius: 5px;
+  border: 2px;
 }
