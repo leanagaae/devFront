@@ -12,3 +12,7 @@ body nav.col-4 a{
   color: #476663;
 }
 
+body figure{
+  width: 50%;
+  height: 50%;
+}
