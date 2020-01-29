@@ -8,7 +8,7 @@ body h1{
   font-family: 'Indie Flower', cursive;
 }
 
-body nav col-4 a{
+body nav.col-4 a{
   color: #476663;
 }
 
