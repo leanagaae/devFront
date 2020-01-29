@@ -7,10 +7,10 @@ $(document).ready(function(){
   }
 
   $("#effets div").click(function() {
-    $( this).hide( 2000, function() {
+    $( this ).hide( 2000, function() {
       $( this ).remove();
   });
-});
+
 
 });
 
