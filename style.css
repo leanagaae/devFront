@@ -6,13 +6,24 @@ body{
 
 body h1{
   font-family: 'Indie Flower', cursive;
+  color: #ec8662;
 }
 
 body nav.col-4 a{
   color: #476663;
+
+}
+body .row{
+  color: #5763c9;
 }
 
 body figure{
   width: 10%;
   height: 10%;
+}
+
+
+#effets div{
+  background: #ffcf36;
+  height: 100px;
 }
