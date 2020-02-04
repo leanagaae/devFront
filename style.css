@@ -1,28 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 
+
+/* Fond */
 body{
-  background: #ccebe8;
+  background: #f9f6e7;
 }
+
+/* Ma première page */
 
 body h1{
   font-family: 'Indie Flower', cursive;
-  color: #ec8662;
+  color: #ba918d;
+  font-weight: 700;
 }
-
+/* Accueil/autre page */
 body nav.col-4 a{
-  color: #239293;
+  color: #92716f;
 
 }
-body .row{
-  color: #5763c9;
+
+/* Ma première colonne Ma deuxième colonne */
+#colonne body .row{
+  color: #27706b;
+  font-weight: 700;
 }
 
+/* Image */
 body figure{
-  width: 10%;
-  height: 10%;
+  width: 5%;
+  height: 5%;
 }
 
-
+/* Les boites jaunes */
 #effets div{
   background: #ffcf36;
   height: 100px;
@@ -31,3 +40,108 @@ body figure{
   border: 2px;
   border-style: outset;
 }
+
+/* Bouton réapparition */
+#show{
+  background-color: #f7876b;
+  color: #f9f6e8;
+  border-radius: 5px;
+  border: 2px;
+  border-style: outset;
+}
+
+
+#tests div{
+  background: #e6522e;
+  height: 100px;
+  margin: 2px;
+}
+
+
+/* Les 3 boites qui bougent */
+#animate div{
+  background: #be755e;
+  height: 100px;
+  margin: 2px;
+  color: #f9f6e8;
+}
+
+/* Les liens de la liste*/
+#ecureuil a{
+  color: blue;
+}
+
+
+/* Les points de la liste*/
+/* #ecureuil li{
+  color: orange;
+} */
+
+.alerte{
+  color: red;
+}
+
+/* Ma boite */
+#maBoite{
+  background: #be755e;
+  height: 100px;
+  margin: 2px;
+  color: #f9f6e8;
+}
+
+.highlight{
+  background-color: yellow;
+}
+
+.bordure{
+  border: 5px solid black;
+}
+
+
+/* QUAND on clique sur les "ceci est un paragraphe" ca affiche la boite en vert*/
+.vert{
+  background-color: green !important;
+}
+
+
+/* POUR TOUTES LES IMAGES DE MERDE*/
+/* On cache les images par défault*/
+#photos div img{
+  display: none;
+  filter: sepia(1); /* Met les images en couleur SEPIA = vieux*/
+}
+
+/* enleve point sur coté */
+#photos nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* met une marge entre chaque vignette pour éviter de les coller */
+#photos nav li{
+  margin-bottom: 10px;
+}
+
+/* recarder taille vignette */
+#photos nav li img{
+  max-width: 100%;
+  height: auto;
+  filter: blur(1Px); /* Met en flou les vignettes */
+  /* filter: grayscale(1); /* noir et blanc et quand on survole ca met en couleur */
+  filter: invert(1); /* met en mode contraste horrible*/
+}
+
+/* Quand on survole l'image */
+#photos nav li img:hover{
+  filter: blur(0);
+  filter: grayscale(0); /* noir et blanc et quand on survole ca met en couleur */
+  filter: invert(0);
+}
+
+
+
+
+
+
+
