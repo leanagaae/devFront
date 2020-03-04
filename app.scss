@@ -1,0 +1,58 @@
+
+// Raccourcis permettant de changer la couleur juste une fois pour toutes les autres ! (pratique quand le code est giga long)
+$couleurPrincipal: red;
+$couleurSecondaire: blue;
+
+$cp: $couleurPrincipal;
+$cs: $couleurSecondaire;
+
+
+/* Dans le body tout les h1 sont en rouge et quand on les ruvoles ils sont en blue*/
+body{
+  h1{
+    color: $cp;
+    &:hover{
+      color: $cs;
+    }
+  }
+}
+
+.monalert{
+  background-color: rgba($cp, 0, 0 , 0.5);
+}
+
+
+%message{
+  padding: .5 em;
+  border: 1px solid rgba($cp, 0, 0 , 1);
+  font-weight: bold;
+}
+
+.message{
+
+  &-error{
+    color: red;
+    @extend %message;
+  }
+  &-valid{
+    color: green;
+    @extend %message;
+
+  }
+  &-warning{
+    color: orange;
+    @extend %message;
+
+  }
+  &-info{
+    color: blue;
+    @extend %message;
+
+  }
+}
+
+
+
+
+
+
