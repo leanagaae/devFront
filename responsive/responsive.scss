@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Tamma+2&display=swap');
+
 // Valeur maximum telephone, tablette...
 $mobile-max: 767px;
 $tablet: 768px;
@@ -5,27 +7,78 @@ $tablet-max: 991px;
 $desktop: 992px;
 
 body{
-  background-color: #c9bbc9;
+  background-color: #a7d0d1;
+  h4{
+    color: black;
+  }
 }
 
+#titre{
+    color: white;
+    font-family: 'Baloo Tamma 2';
+    text-align: center;
+    padding-top: 40px;
+  }
 .tablet{
   display: none;
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 .box{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; // Permet de mettre la ou y'a de la place, si pas de place, alors redescend en bas
   article{
+    background-color: #f6d2d3;
     width: 100%;
-    background: white;
     margin: 5px;
     padding: 5px;
     box-sizing: border-box;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+//Permet d'avoir des fonds pour toutes les div
+
+#maBoite{
+  display: grid;
+  grid-template-rows: (3, 1fr);
+  nav{
+      grid-row-start: 3;
+  }
+  a{
+    color: black;
+  }
+  a:hover{
+    color: red;
+  }
+  h1{
+    text-align: center;
+    text-transform: 400;
+  }
+  h3{
+    padding-top: 30px;
+    padding-bottom: 10px;
   }
 }
 
-//Mettre en fond la couleur..pour les mobiles uniquements...
 
+#other{
+  text-align: center;
+  a{
+    font-size: 50px;
+    color: white;
+  }
+
+}
+
+// ----------------------------------------------------------------------
+//Mettre en fond la couleur..pour les TABLETTE uniquements...
 @media (min-width: $tablet) AND (max-width: $tablet-max) {
   body{
     background-color: #fff7b8;
@@ -34,20 +87,97 @@ body{
   .tablet{
     display: block;
   }
+  //Article 1 2 et 3
   .box{
     article{
       width: calc(50% - 10px);
     }
   }
+
+  //Ma boite
+  // #maBoite{
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
+  #maBoite{
+    grid-template-columns: auto auto 200px;
+    grid-template-rows: (2, 1fr);
+    &>*{
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+    nav{
+        grid-row: span 3;
+        grid-column: span 1;
+        grid-column-start: 3;
+    }
+  }
 }
 
+
+#maboiteBootStrap{
+  background-color: white;
+  &>*{
+      background-color: #ccc;
+  }
+
+  h1{
+    text-align: center;
+    text-transform: 400;
+  }
+  p{
+    padding-top:30px;
+
+  }
+}
+//https://css-tricks.com/snippets/css/complete-guide-grid/
+#maBoite{
+  background-color: white;
+  &>*{
+      background-color: #a7d0d1;
+      margin: 5px;
+      padding: 5px;
+  }
+  nav{
+      display: flex;
+      flex-direction: column;
+      ul{
+          padding: 0;
+          list-style: none;
+      }
+  }
+}
+// ----------------------------------------------------------------------
+// pour les ORDINATEURS
 @media (min-width: $desktop){
   body{
-    background-color: #89adaa;
+    background-color: #a74d54;
   }
   .box{
     article{
       width: calc(33.33333333% - 10px);
     }
   }
+
+  #maBoite{
+    grid-template-columns: 300px auto 200px;
+    grid-template-rows: repeat(1, 1fr);
+    nav{
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+    figure{
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    article{
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
 }
+}
+
+
+//
+// ----------------------------------------------------------------------
+

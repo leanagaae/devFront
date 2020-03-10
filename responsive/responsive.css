@@ -1,9 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+Tamma+2&display=swap");
 body {
-  background-color: #c9bbc9;
+  background-color: #a7d0d1;
+}
+
+body h4 {
+  color: black;
+}
+
+#titre {
+  color: white;
+  font-family: 'Baloo Tamma 2';
+  text-align: center;
+  padding-top: 40px;
 }
 
 .tablet {
   display: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .box {
@@ -12,11 +29,51 @@ body {
 }
 
 .box article {
+  background-color: #f6d2d3;
   width: 100%;
-  background: white;
   margin: 5px;
   padding: 5px;
   box-sizing: border-box;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+
+#maBoite {
+  display: grid;
+  grid-template-rows: 3, 1fr;
+}
+
+#maBoite nav {
+  grid-row-start: 3;
+}
+
+#maBoite a {
+  color: black;
+}
+
+#maBoite a:hover {
+  color: red;
+}
+
+#maBoite h1 {
+  text-align: center;
+  text-transform: 400;
+}
+
+#maBoite h3 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+#other {
+  text-align: center;
+}
+
+#other a {
+  font-size: 50px;
+  color: white;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -29,13 +86,79 @@ body {
   .box article {
     width: calc(50% - 10px);
   }
+  #maBoite {
+    grid-template-columns: auto auto 200px;
+    grid-template-rows: 2, 1fr;
+  }
+  #maBoite > * {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+  #maBoite nav {
+    grid-row: span 3;
+    grid-column: span 1;
+    grid-column-start: 3;
+  }
+}
+
+#maboiteBootStrap {
+  background-color: white;
+}
+
+#maboiteBootStrap > * {
+  background-color: #ccc;
+}
+
+#maboiteBootStrap h1 {
+  text-align: center;
+  text-transform: 400;
+}
+
+#maboiteBootStrap p {
+  padding-top: 30px;
+}
+
+#maBoite {
+  background-color: white;
+}
+
+#maBoite > * {
+  background-color: #a7d0d1;
+  margin: 5px;
+  padding: 5px;
+}
+
+#maBoite nav {
+  display: flex;
+  flex-direction: column;
+}
+
+#maBoite nav ul {
+  padding: 0;
+  list-style: none;
 }
 
 @media (min-width: 992px) {
   body {
-    background-color: #89adaa;
+    background-color: #a74d54;
   }
   .box article {
     width: calc(33.33333333% - 10px);
+  }
+  #maBoite {
+    grid-template-columns: 300px auto 200px;
+    grid-template-rows: repeat(1, 1fr);
+  }
+  #maBoite nav {
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
+  #maBoite figure {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  #maBoite article {
+    grid-column-start: 2;
+    grid-row-start: 1;
   }
 }
