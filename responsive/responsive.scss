@@ -1,0 +1,53 @@
+// Valeur maximum telephone, tablette...
+$mobile-max: 767px;
+$tablet: 768px;
+$tablet-max: 991px;
+$desktop: 992px;
+
+body{
+  background-color: #c9bbc9;
+}
+
+.tablet{
+  display: none;
+}
+
+.box{
+  display: flex;
+  flex-wrap: wrap;
+  article{
+    width: 100%;
+    background: white;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+}
+
+//Mettre en fond la couleur..pour les mobiles uniquements...
+
+@media (min-width: $tablet) AND (max-width: $tablet-max) {
+  body{
+    background-color: #fff7b8;
+  }
+  //Permet de faire en sorte que le truc s'affiche qu'a partir d'une certaine taille
+  .tablet{
+    display: block;
+  }
+  .box{
+    article{
+      width: calc(50% - 10px);
+    }
+  }
+}
+
+@media (min-width: $desktop){
+  body{
+    background-color: #89adaa;
+  }
+  .box{
+    article{
+      width: calc(33.33333333% - 10px);
+    }
+  }
+}
