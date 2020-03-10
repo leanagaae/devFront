@@ -10,3 +10,7 @@ body a {
 body a:hover {
   color: blue;
 }
+
+body h1 {
+  color: orange;
+}
